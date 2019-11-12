@@ -1,0 +1,6 @@
+[submodule "itaewon-coding-dojo/itaewon-coding-dojo/coding-dojo"]
+	path = itaewon-coding-dojo/itaewon-coding-dojo/coding-dojo
+	url = https://github.com/hyejineee/coding-dojo.git
+[submodule "itaewon-coding-dojo/coding-dojo"]
+	path = itaewon-coding-dojo/coding-dojo
+	url = https://github.com/hyejineee/coding-dojo.git

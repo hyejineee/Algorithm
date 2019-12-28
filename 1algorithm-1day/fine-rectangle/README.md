@@ -1,9 +1,8 @@
 # ✂️📄멀쩡한 사각형
 
-##문제
+## 문제
 
 [프로그래머스 - 멀쩡한 사각형](https://programmers.co.kr/learn/courses/30/lessons/62048)
-
 
 ## 1. 이해
 - 가로 길이와 세로 길이가 주어진다.(단위: cm)

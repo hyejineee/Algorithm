@@ -14,8 +14,8 @@
 
 ## 2. 계획 
 - 패턴을 찾는다.  
- ![](../image/numberOf124(1))
+ ![](../../image/numberOf124(1).png)
     
 - 일반화 한다.  
- ![](../image/numberOf124(2))
+ ![](../../image/numberOf124(2).png)
 

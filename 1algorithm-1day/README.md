@@ -9,4 +9,4 @@
 
 2020-01-05 [x만큼 간격이 있는 n개의 숫자](https://github.com/hyejineee/Algorithm/tree/master/1algorithm-1day/javascript/n-numbers)
 
-2020-01-08[탑](https://github.com/hyejineee/Algorithm/tree/master/1algorithm-1day/javascript/top)
+2020-01-08 [탑](https://github.com/hyejineee/Algorithm/tree/master/1algorithm-1day/javascript/top)

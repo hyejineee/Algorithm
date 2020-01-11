@@ -15,11 +15,11 @@ const findTowerIndexs = heights => {
     //     findTowerIndex(4,[[6,1],[9,2],[5,3],[7,4]])
     // ];
 
-    const heightIndexPairs = heights.map((x,index)=>[x,index+1])
+    const heightIndexPairs = heights.map((height,index)=>[height,index+1])
 
-    return heightIndexPairs.map((it,index)=>{
-        return findTowerIndex(it[0],heightIndexPairs.slice(0,index))
-    })
+    return heightIndexPairs.map(([height,index])=>
+        findTowerIndex(height,heightIndexPairs.slice(0,index-1))
+    );
 
 };
 
@@ -35,9 +35,10 @@ const findTowerIndex = (sendTower, remainTowers) =>{
     // expect(findTowerIndex(2,[3, 9, 9, 7, 5, 7])).toBe(6)
     // -> 인덱스와 높이를 묶어서 사용한다. heights.map((x,index)=>[x,index])
 
-    const receiveTower = remainTowers.filter(it=>it[0]>sendTower).pop()
-    return receiveTower!== undefined ? receiveTower[1]:0;
+    const receiveTower = remainTowers.filter(([height,_])=> height>sendTower).pop()
+    return receiveTower ? receiveTower[1]:0;
 };
+
 
 test(`각 송신탑들의 수신탑의 인덱스를 구한다.`, () => {
     expect(findTowerIndexs([6, 9, 5, 7, 4])).toEqual([0, 0, 2, 2, 4]);
@@ -53,13 +54,15 @@ test(`수신탑의 높이에 해당하는 인덱스를 구한다.`, ()=>{
         [ 6, 1 ], 
         [ 9, 2 ], 
         [ 5, 3 ], 
-        [ 7, 4 ]]))
+        [ 7, 4 ]
+    ]))
         .toBe(4)
 
     expect(findTowerIndex(7, [ 
         [ 6, 1 ], 
         [ 9, 2 ], 
-        [ 5, 3 ]]))
+        [ 5, 3 ]
+    ]))
         .toBe(2)
 
     expect(findTowerIndex(2, [

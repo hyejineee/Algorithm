@@ -1,7 +1,10 @@
 const gcdLcm = (n1, n2) => {
   const gcd = calculateGCD(n1, n2, 2);
-  return [gcd, (((n1 / gcd) * n2) / gcd) * gcd];
+  const lcm = calculateLCM(n1,n2,gcd)
+  return [gcd,lcm];
 };
+
+const calculateLCM = (n1, n2, gcd)=> (n1 * n2) / gcd
 
 const calculateGCD = (n1, n2, divider) => {
   if (divider > n1 || divider > n2) {

@@ -10,4 +10,9 @@
 2020-01-05 [x만큼 간격이 있는 n개의 숫자](https://github.com/hyejineee/Algorithm/tree/master/1algorithm-1day/javascript/n-numbers)
 
 2020-01-08 [탑](https://github.com/hyejineee/Algorithm/tree/master/1algorithm-1day/javascript/top)
-2020-01-16 소수 만들기
+
+2020-01-13 콜라츠의 추측, 평균 구하기, 최대 공약수 최소 공배수 
+
+2020-01-16 소수 만들기 
+
+

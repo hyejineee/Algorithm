@@ -11,6 +11,7 @@ const incompletePlayer = (participants, completion) => {
   
 };
 
+
 test(`완주하지 못한 선수`, () => {
   expect(incompletePlayer(["leo", "kiki", "eden"], ["eden", "kiki"])).toEqual(
     "leo"

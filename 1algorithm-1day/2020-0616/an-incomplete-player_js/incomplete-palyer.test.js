@@ -1,27 +1,32 @@
+const incompletePlayer = (participants, completion) => {
+  const p = participants.sort();
+  let c = completion.sort();
 
-const incompletePlayer = (participants, completion)=>{
-
-    const result = participants.map( participant =>{
-        const index = completion.indexOf(participant) 
-        if(index > -1){
-            completion.splice(index,1)
-            return true
-        }else{
-            return false
-        }
-    });
-
-    return participants[result.indexOf(false)]
+  return p.reduce((_, cur, curIndex) => {
+    if (cur != c[curIndex]) {
+      p.splice(curIndex, p.length - curIndex);
+      return cur;
+    }
+  });
+  
 };
 
 test(`완주하지 못한 선수`, () => {
-    expect(incompletePlayer
-        (["leo", "kiki", "eden"],
-        ["eden", "kiki"])
-    ).toEqual("leo");
+  expect(incompletePlayer(["leo", "kiki", "eden"], ["eden", "kiki"])).toEqual(
+    "leo"
+  );
 
-    expect(incompletePlayer
-        (["mislav", "stanko", "mislav", "ana"],
-        ["stanko", "ana", "mislav"])
-    ).toEqual("mislav");
-  });
+  expect(
+    incompletePlayer(
+      ["mislav", "stanko", "mislav", "ana"],
+      ["stanko", "ana", "mislav"]
+    )
+  ).toEqual("mislav");
+
+  expect(
+    incompletePlayer(
+      ["marina", "josipa", "nikola", "vinko", "filipa"],
+      ["josipa", "filipa", "marina", "nikola"]
+    )
+  ).toEqual("vinko");
+});

@@ -1,7 +1,7 @@
-// let fs = require('fs');
-// let input = fs.readFileSync('/dev/stdin').toString().split('\n').map(
-//     (x) => Number(x)
-// );
+let fs = require('fs');
+let input = fs.readFileSync('/dev/stdin').toString().split('\n').map(
+    (x) => Number(x)
+);
 
 const multiplication = (numbers)=>{
     let r = Array.from(numbers[1].toString()).reverse().reduce((acc,cur)=>
